@@ -12,9 +12,9 @@
 }
 
 .button-container {
-    display: flex; /* Usar flexbox para alinear los botones horizontalmente */
-    justify-content: center; /* Centrar los botones en el contenedor */
-    margin: 10px 0; /* Espaciado alrededor del contenedor */
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
 }
 .gradient-button {
     padding: 15px 30px;
