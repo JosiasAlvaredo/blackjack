@@ -5,14 +5,12 @@ const MainPage = () => {
   const [showGame, setShowGame] = useState(false);
 
   const handleButtonClick = () => {
-    setShowGame(prevShowGame => !prevShowGame);
+    setShowGame(true);
   };
 
   return (
     <div>
-      <button onClick={handleButtonClick}>
-        {showGame ? 'Hide Game' : 'Show Game'}
-      </button>
+      {!showGame && <button onClick={handleButtonClick}>Show Game</button>}
       {showGame && <Game />}
     </div>
   );
