@@ -11,8 +11,47 @@
     margin: 10px 0;
 }
 
-button {
-    margin: 10px;
-    padding: 10px 20px;
+.button-container {
+    display: flex; /* Usar flexbox para alinear los botones horizontalmente */
+    justify-content: center; /* Centrar los botones en el contenedor */
+    margin: 10px 0; /* Espaciado alrededor del contenedor */
+}
+.gradient-button {
+    padding: 15px 30px;
     font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+
+.button-pedir {
+    background-color: #007bff;
+}
+
+.button-pedir:hover {
+    background-color: #0056b3; 
+    transform: scale(1.05);
+}
+
+.button-plantarse {
+    background-color: #ff0000;
+}
+
+.button-plantarse:hover {
+    background-color: #cc0000; 
+    transform: scale(1.05);
+}
+
+
+.disabled {
+    background: #555; 
+    cursor: not-allowed; 
+}
+
+.disabled:hover {
+    background: #555; 
 }

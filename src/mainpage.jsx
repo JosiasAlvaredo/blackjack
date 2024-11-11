@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './mainpage.css';
 import Game from './Game';
 
 const MainPage = () => {
@@ -10,7 +9,7 @@ const MainPage = () => {
   };
 
   return (
-    <div className="main-page">
+    <div>
       <button onClick={handleButtonClick}>
         {showGame ? 'Hide Game' : 'Show Game'}
       </button>

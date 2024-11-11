@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CardDisplay from './CardDisplay';
-
+import "./Game.css"
 const Game = () => {
     const [deckId, setDeckId] = useState('');
     const [playerCards, setPlayerCards] = useState([]);
@@ -83,8 +83,10 @@ const Game = () => {
             <CardDisplay className='main-game' title="Cartas del Jugador" cards={playerCards} />
             <CardDisplay className='main-game' title="Cartas del Dealer" cards={dealerCards} />
             <h2>Puntuación del Jugador: {playerScore}</h2>
-            <button onClick={() => drawCard(true)} disabled={gameOver}>Pedir Carta</button>
-            <button onClick={() => { drawCard(false); checkWinner(); }} disabled={gameOver}>Plantarse</button>
+            <div className='button-container'>
+            <button onClick={() => drawCard(true)} disabled={gameOver} class="gradient-button button-pedir">Pedir Carta</button>
+            <button onClick={() => { drawCard(false); checkWinner(); }} disabled={gameOver} class="gradient-button button-plantarse">Plantarse</button>
+            </div>
             {gameOver && <h2>{result}</h2>}
         </div>
     );
