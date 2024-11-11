@@ -79,10 +79,10 @@ const Game = () => {
     };
 
     return (
-        <div>
-            <CardDisplay title="Cartas del Jugador" cards={playerCards} />
-            <CardDisplay title="Cartas del Dealer" cards={dealerCards} />
-            <h2>Puntuación del Jugador: {playerScore}</h2> {/* Mostrar la puntuación del jugador */}
+        <div className="game-container">
+            <CardDisplay className='main-game' title="Cartas del Jugador" cards={playerCards} />
+            <CardDisplay className='main-game' title="Cartas del Dealer" cards={dealerCards} />
+            <h2>Puntuación del Jugador: {playerScore}</h2>
             <button onClick={() => drawCard(true)} disabled={gameOver}>Pedir Carta</button>
             <button onClick={() => { drawCard(false); checkWinner(); }} disabled={gameOver}>Plantarse</button>
             {gameOver && <h2>{result}</h2>}

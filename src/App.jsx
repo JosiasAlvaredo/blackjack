@@ -1,11 +1,11 @@
 import React from 'react';
-import Game from './Game';
+import MainPage from './mainpage';
+import './App.css'
 
 const App = () => {
     return (
         <div>
-            <h1>Blackjack</h1>
-            <Game />
+            <MainPage />
         </div>
     );
 };
